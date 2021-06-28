@@ -21,7 +21,7 @@ use App\Http\Controllers\jwtController;
 // });
 
 
-Route::get('/login',[AuthController::class, 'login'])->name('login');
+Route::POST('/login',[AuthController::class, 'login'])->name('login');
 Route::post('/register',[AuthController::class, 'create']);
 Route::post('/data-xml', [jwtController::class, 'setDataXml']);
-Route::get('/reporte', [jwtController::class, 'makeReporte']);
+Route::POST('/reporte', [jwtController::class, 'makeReporte']);
